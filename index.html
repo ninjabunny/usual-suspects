@@ -1,0 +1,64 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Ususal Suspects</title>
+  <meta name="description" content="Ususal Suspects">
+  <style>
+  .tint {
+    position: relative;
+    float: left;
+    cursor: pointer;
+    -webkit-shadow: rgba(0,0,0,.2) 3px 5px 5px;
+    -moz-shadow: rgba(0,0,0,.2) 3px 5px 5px;
+    box-shadow: rgba(0,0,0,.2) 3px 5px 5px;
+  }
+  
+  .tint:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -moz-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+  }
+  .tint:before {
+    background: rgba(0,255,255, 0.5);
+  }
+  .red:before{
+        background: rgba(0,0,0, 0.7);
+  }
+  figure {
+  	display: inline;
+  	-webkit-margin-before: 0em;
+  	-webkit-margin-after: 0em;
+  	-webkit-margin-start: 0px;
+  	-webkit-margin-end: 0px;
+  }
+  </style>
+</head>
+
+<body>
+  <div>
+    <div id='header'>
+      <a href="https://github.com/ninjabunny/usual-suspects" target='_blank'>Usual Suspects</a>
+      <input type="text" id="seed" placeholder="seed" size="8" autofocus>
+      <input type="text" id="pixnum" placeholder="number of pictures" size="16">
+      <button id="reset" onclick="fire()">Reset</button>
+      <button id="spymaster" onclick="spyMaster()">SpyMaster</button>
+    </div>
+  </div>
+  <div id="board"></div>
+  <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+  <script src="seedrandom.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
